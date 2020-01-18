@@ -15,7 +15,48 @@ public class O_1 {
         System.out.println(Arrays.toString(sortedArray));
     }
 
-    //计数排序
+    /**
+     * 计数排序（优化，稳定排序）
+     * @author huangzihua
+     * @date 2020-01-18
+     */
+    public static int[] countSort2(int[] array){
+        // 1.得到数列的最大值
+        int maxValue = array[0];
+        int minValue = array[0];
+        for (int i = 1; i < array.length; i++){
+            if(array[i] > maxValue){
+                maxValue = array[i];
+            }
+            if(array[i] < minValue){
+                minValue = array[i];
+            }
+        }
+        // 2.根据数列最大值确定统计数组的长度
+        int[] countArray = new int[maxValue-minValue+1];
+        // 3.遍历数列，填充统计数组
+        for (int i = 0; i < array.length; i++){
+            countArray[array[i]-minValue]++;
+        }
+        // 4.遍历统计数组，输出结果
+        int[] sortedArray = new int[array.length];
+        int sourtedIndex = 0;
+        for (int i = 0; i < countArray.length; i++){
+            for (int j = 0; j < countArray[i]; j++){
+                sortedArray[sourtedIndex] = i+minValue;
+                sourtedIndex++;
+            }
+        }
+        return sortedArray;
+    }
+
+    /**
+     * 计数排序。
+     * 适用于整数型数列，且元素值相对集中在可接受范围内。
+     * @param array 数列
+     * @author huangzihua
+     * @date 2020-01-18
+     */
     public static int[] countSort(int[] array){
         // 1.得到数列的最大值
         int maxValue = array[0];
