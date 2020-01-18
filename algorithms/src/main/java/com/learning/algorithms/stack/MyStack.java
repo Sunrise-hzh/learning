@@ -1,7 +1,5 @@
 package com.learning.algorithms.stack;
 
-import java.util.Stack;
-
 public class MyStack {
     private int[] array;
     private int size;
