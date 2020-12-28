@@ -12,6 +12,8 @@
         <module>algorithms</module>
         <module>leetcode</module>
         <module>encoding-and-decoding</module>
+        <module>regular-expression</module>
+        <module>collection</module>
     </modules>
 
 
