@@ -14,6 +14,13 @@
         <module>encoding-and-decoding</module>
         <module>regular-expression</module>
         <module>collection</module>
+        <module>thread</module>
+        <module>jvm</module>
+        <module>compiler_javac</module>
+        <module>jdbc</module>
+        <module>java8</module>
+        <module>zookeeper-demo</module>
+        <module>java-usb</module>
     </modules>
 
 
